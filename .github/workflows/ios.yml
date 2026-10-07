@@ -24,7 +24,7 @@ jobs:
 
       - name: Build iOS Simulator
         run: |
-          uv run flet build ios-simulator --yes --verbose
+          uv run flet build ios-simulator --yes --verbose --skip-flutter-doctor
 
       - name: Upload iOS Simulator build
         uses: actions/upload-artifact@v7
