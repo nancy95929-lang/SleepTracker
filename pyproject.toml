@@ -14,7 +14,7 @@ dependencies = [
 product = "睡眠日記"
 company = "SleepTracker"
 copyright = "Copyright 2026"
-bundle_id = "com.example.sleeptracker"
+bundle_id = "io.github.nancy95929lang.sleeptracker"
 
 [tool.flet.app]
 path = "."
