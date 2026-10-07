@@ -1,0 +1,31 @@
+name: Build iOS Simulator
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Build iOS Simulator
+        id: build
+        uses: flet-dev/flet-build-action@v1
+        with:
+          target: ios-simulator
+          runner-python-version: "3.14"
+          bundled-python-version: "3.14"
+          build-number: ${{ github.run_number }}
+
+      - name: Upload iOS build
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ steps.build.outputs.archive-path }}
+          archive: false
+          if-no-files-found: error
