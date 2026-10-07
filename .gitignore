@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+
+# Flet temporary files
+.flet/
+
+# Local sleep database
+sleep.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Generated reports
+exports/
+
+# Downloaded / backup packages
+*.zip
+
+# Build output
+build/
+dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

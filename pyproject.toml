@@ -1,0 +1,22 @@
+[project]
+name = "sleep-tracker"
+version = "0.8.0"
+description = "繁體中文睡眠打卡、日誌與分析 App"
+requires-python = ">=3.12"
+dependencies = [
+    "flet==1.0.3",
+    "openpyxl>=3.1.5",
+    "matplotlib>=3.10.0"
+]
+
+[tool.flet]
+product = "睡眠日記"
+company = "SleepTracker"
+copyright = "Copyright 2026"
+bundle_id = "com.example.sleeptracker"
+
+[tool.flet.app]
+path = "."
+
+[tool.flet.ios]
+export_method = "debugging"
