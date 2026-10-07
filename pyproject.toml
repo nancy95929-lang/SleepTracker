@@ -3,6 +3,7 @@ name = "sleep-tracker"
 version = "0.8.0"
 description = "繁體中文睡眠打卡、日誌與分析 App"
 requires-python = ">=3.12"
+
 dependencies = [
     "flet==1.0.3",
     "openpyxl>=3.1.5",
@@ -20,3 +21,7 @@ path = "."
 
 [tool.flet.ios]
 export_method = "debugging"
+
+[tool.flet.flutter.pubspec.dependency_overrides]
+jni = "1.1.0"
+jni_flutter = "1.0.4+1"
